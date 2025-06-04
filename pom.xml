@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -7,10 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework</groupId>
     <artifactId>jb-hello-world-maven</artifactId>
-    <packaging>jar</packaging>
     <version>0.2.0</version>
-
-    <!-- tag::joda[] -->
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -18,13 +15,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <!-- Add your Nexus repository here -->
-    <repositories>
+    <distributionManagement>
         <repository>
             <id>nexus-repo</id>
             <url>http://192.168.56.23:8081/repository/maven-releases/</url>
         </repository>
-    </repositories>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -33,7 +29,6 @@
             <version>2.2</version>
         </dependency>
     </dependencies>
-    <!-- end::joda[] -->
 
     <build>
         <plugins>
